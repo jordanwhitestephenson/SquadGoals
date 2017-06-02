@@ -61,10 +61,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-u5-lee">
-                                <rect key="frame" x="149" y="389" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SC-Bl-wKe">
+                                <rect key="frame" x="136" y="389" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIGN IN"/>
+                                <state key="normal" title="SIGN ME IN"/>
+                                <connections>
+                                    <action selector="signmeinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9H-tF-kye"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,7 +76,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="ZwT-hD-sGe" id="9M2-ze-q7N"/>
                         <outlet property="passwordTextField" destination="Mt0-Fd-LoT" id="wIt-lo-QsF"/>
-                        <outlet property="signInTapped" destination="aUr-u5-lee" id="Dil-lv-VI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

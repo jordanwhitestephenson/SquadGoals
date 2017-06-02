@@ -7,23 +7,33 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var signInTapped: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func signmeinTapped(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:  {
+           (user, error) in
+            print("We tried to sign in")
+            if error != nil {
+                print("HEY WE HAVE AN ERROR:\(error)")
+            } else {
+                print("Signed in success")
+            }
+        })
+    
     }
-
-
 }
+
+
+
 
