@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23EA19C50DAF96B25A3AFAE /* Pods_SquadGoals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */; };
 		EFB73F8C1EDF323C0090CF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */; };
 		EFB73F8E1EDF323C0090CF52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73F8D1EDF323C0090CF52 /* ViewController.swift */; };
 		EFB73F911EDF323C0090CF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB73F8F1EDF323C0090CF52 /* Main.storyboard */; };
 		EFB73F941EDF323C0090CF52 /* SquadGoals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFB73F921EDF323C0090CF52 /* SquadGoals.xcdatamodeld */; };
 		EFB73F961EDF323C0090CF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB73F951EDF323C0090CF52 /* Assets.xcassets */; };
 		EFB73F991EDF323C0090CF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB73F971EDF323C0090CF52 /* LaunchScreen.storyboard */; };
+		EFB73FA11EDF352F0090CF52 /* squadgoalslogo.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FA01EDF352F0090CF52 /* squadgoalslogo.png */; };
+		EFB73FAB1EDF3D710090CF52 /* mysquadbutton3.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FAA1EDF3D710090CF52 /* mysquadbutton3.png */; };
+		EFB73FAD1EDF3E040090CF52 /* mysquadbutton4.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FAC1EDF3E040090CF52 /* mysquadbutton4.png */; };
+		EFB73FAF1EDF74CF0090CF52 /* squadlistbutton2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */; };
+		EFB73FB11EDF75F90090CF52 /* runsquadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */; };
+		EFB73FD41EE1E07D0090CF52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquadGoals.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals.release.xcconfig"; sourceTree = "<group>"; };
+		697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquadGoals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB73F881EDF323C0090CF52 /* SquadGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquadGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB73F8D1EDF323C0090CF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		EFB73F951EDF323C0090CF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB73F981EDF323C0090CF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFB73F9A1EDF323C0090CF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB73FA01EDF352F0090CF52 /* squadgoalslogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squadgoalslogo.png; sourceTree = "<group>"; };
+		EFB73FAA1EDF3D710090CF52 /* mysquadbutton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mysquadbutton3.png; sourceTree = "<group>"; };
+		EFB73FAC1EDF3E040090CF52 /* mysquadbutton4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mysquadbutton4.png; sourceTree = "<group>"; };
+		EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squadlistbutton2.png; sourceTree = "<group>"; };
+		EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runsquadbutton.png; sourceTree = "<group>"; };
+		EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23EA19C50DAF96B25A3AFAE /* Pods_SquadGoals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4450104E0FF66243487BF4B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7243FA67D0B2129A7FEF9673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */,
+				075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EFB73F7F1EDF323B0090CF52 = {
 			isa = PBXGroup;
 			children = (
 				EFB73F8A1EDF323C0090CF52 /* SquadGoals */,
 				EFB73F891EDF323C0090CF52 /* Products */,
+				7243FA67D0B2129A7FEF9673 /* Pods */,
+				4450104E0FF66243487BF4B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +92,12 @@
 		EFB73F8A1EDF323C0090CF52 /* SquadGoals */ = {
 			isa = PBXGroup;
 			children = (
+				EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */,
+				EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */,
+				EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */,
+				EFB73FAC1EDF3E040090CF52 /* mysquadbutton4.png */,
+				EFB73FAA1EDF3D710090CF52 /* mysquadbutton3.png */,
+				EFB73FA01EDF352F0090CF52 /* squadgoalslogo.png */,
 				EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */,
 				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
 				EFB73F8F1EDF323C0090CF52 /* Main.storyboard */,
@@ -74,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFB73F9D1EDF323C0090CF52 /* Build configuration list for PBXNativeTarget "SquadGoals" */;
 			buildPhases = (
+				1CD8881BA8E0EDC8D2EF1A84 /* [CP] Check Pods Manifest.lock */,
 				EFB73F841EDF323B0090CF52 /* Sources */,
 				EFB73F851EDF323B0090CF52 /* Frameworks */,
 				EFB73F861EDF323B0090CF52 /* Resources */,
+				6FAA782B109670F71CD18571 /* [CP] Embed Pods Frameworks */,
+				A16B0E830E24DBF1B688F1BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,13 +171,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB73FAB1EDF3D710090CF52 /* mysquadbutton3.png in Resources */,
+				EFB73FAD1EDF3E040090CF52 /* mysquadbutton4.png in Resources */,
+				EFB73FD41EE1E07D0090CF52 /* GoogleService-Info.plist in Resources */,
 				EFB73F991EDF323C0090CF52 /* LaunchScreen.storyboard in Resources */,
+				EFB73FAF1EDF74CF0090CF52 /* squadlistbutton2.png in Resources */,
+				EFB73FB11EDF75F90090CF52 /* runsquadbutton.png in Resources */,
 				EFB73F961EDF323C0090CF52 /* Assets.xcassets in Resources */,
+				EFB73FA11EDF352F0090CF52 /* squadgoalslogo.png in Resources */,
 				EFB73F911EDF323C0090CF52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CD8881BA8E0EDC8D2EF1A84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6FAA782B109670F71CD18571 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A16B0E830E24DBF1B688F1BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFB73F841EDF323B0090CF52 /* Sources */ = {
@@ -264,6 +363,7 @@
 		};
 		EFB73F9E1EDF323C0090CF52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SquadGoals/Info.plist;
@@ -276,6 +376,7 @@
 		};
 		EFB73F9F1EDF323C0090CF52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SquadGoals/Info.plist;
@@ -305,6 +406,7 @@
 				EFB73F9F1EDF323C0090CF52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
