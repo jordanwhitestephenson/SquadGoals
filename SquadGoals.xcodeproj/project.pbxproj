@@ -20,6 +20,10 @@
 		EFB73FAF1EDF74CF0090CF52 /* squadlistbutton2.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */; };
 		EFB73FB11EDF75F90090CF52 /* runsquadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */; };
 		EFB73FD41EE1E07D0090CF52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */; };
+		EFB73FDA1EE209930090CF52 /* squadgoallogo.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FD91EE209930090CF52 /* squadgoallogo.png */; };
+		EFB73FDC1EE20B820090CF52 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */; };
+		EFB73FDE1EE20D3D0090CF52 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */; };
+		EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squadlistbutton2.png; sourceTree = "<group>"; };
 		EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runsquadbutton.png; sourceTree = "<group>"; };
 		EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFB73FD91EE209930090CF52 /* squadgoallogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squadgoallogo.png; sourceTree = "<group>"; };
+		EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,8 @@
 		EFB73F8A1EDF323C0090CF52 /* SquadGoals */ = {
 			isa = PBXGroup;
 			children = (
+				EFB73F8F1EDF323C0090CF52 /* Main.storyboard */,
+				EFB73FD91EE209930090CF52 /* squadgoallogo.png */,
 				EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */,
 				EFB73FB01EDF75F90090CF52 /* runsquadbutton.png */,
 				EFB73FAE1EDF74CF0090CF52 /* squadlistbutton2.png */,
@@ -100,7 +110,9 @@
 				EFB73FA01EDF352F0090CF52 /* squadgoalslogo.png */,
 				EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */,
 				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
-				EFB73F8F1EDF323C0090CF52 /* Main.storyboard */,
+				EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */,
+				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
+				EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */,
 				EFB73F951EDF323C0090CF52 /* Assets.xcassets */,
 				EFB73F971EDF323C0090CF52 /* LaunchScreen.storyboard */,
 				EFB73F9A1EDF323C0090CF52 /* Info.plist */,
@@ -173,6 +185,7 @@
 			files = (
 				EFB73FAB1EDF3D710090CF52 /* mysquadbutton3.png in Resources */,
 				EFB73FAD1EDF3E040090CF52 /* mysquadbutton4.png in Resources */,
+				EFB73FDA1EE209930090CF52 /* squadgoallogo.png in Resources */,
 				EFB73FD41EE1E07D0090CF52 /* GoogleService-Info.plist in Resources */,
 				EFB73F991EDF323C0090CF52 /* LaunchScreen.storyboard in Resources */,
 				EFB73FAF1EDF74CF0090CF52 /* squadlistbutton2.png in Resources */,
@@ -241,6 +254,9 @@
 				EFB73F941EDF323C0090CF52 /* SquadGoals.xcdatamodeld in Sources */,
 				EFB73F8E1EDF323C0090CF52 /* ViewController.swift in Sources */,
 				EFB73F8C1EDF323C0090CF52 /* AppDelegate.swift in Sources */,
+				EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */,
+				EFB73FDC1EE20B820090CF52 /* AddTaskViewController.swift in Sources */,
+				EFB73FDE1EE20D3D0090CF52 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
