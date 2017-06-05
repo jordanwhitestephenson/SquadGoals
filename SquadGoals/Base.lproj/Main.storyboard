@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="3156" y="1555.7721139430287"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="lVp-ii-F07">
             <objects>
-                <viewController id="iO2-P9-1Af" customClass="ViewController" customModule="SquadGoals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iO2-P9-1Af" customClass="MapViewController" customModule="SquadGoals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BeG-FU-qEl"/>
                         <viewControllerLayoutGuide type="bottom" id="yEI-68-tqe"/>
@@ -140,25 +140,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kO7-bI-Qz4">
-                                <rect key="frame" x="16" y="64" width="343" height="559"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kO7-bI-Qz4">
+                                <rect key="frame" x="16" y="64" width="343" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76f-eo-5Vt">
+                                <rect key="frame" x="0.0" y="436" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iO2-P9-1Af" id="oxb-xQ-ebd"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yEI-68-tqe" firstAttribute="top" secondItem="kO7-bI-Qz4" secondAttribute="bottom" id="9XN-jO-2bj"/>
-                            <constraint firstItem="kO7-bI-Qz4" firstAttribute="top" secondItem="BeG-FU-qEl" secondAttribute="bottom" id="Osx-7E-JHu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kO7-bI-Qz4" secondAttribute="trailing" id="nco-R6-Zg1"/>
-                            <constraint firstItem="kO7-bI-Qz4" firstAttribute="leading" secondItem="a8N-aL-iat" secondAttribute="leadingMargin" id="ozm-ko-7am"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="kO7-bI-Qz4" id="Lfk-5B-0mT"/>
+                        <outlet property="mapView" destination="kO7-bI-Qz4" id="BPV-um-Lc1"/>
+                        <outlet property="searchDisplayController" destination="2cL-4a-DMC" id="676-ht-3jN"/>
+                        <outletCollection property="mapView" destination="kO7-bI-Qz4" collectionClass="NSMutableArray" id="DIc-tV-v3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTH-LA-qhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2cL-4a-DMC">
+                    <connections>
+                        <outlet property="delegate" destination="iO2-P9-1Af" id="ONs-hV-8yH"/>
+                        <outlet property="searchBar" destination="76f-eo-5Vt" id="XXc-Lp-NOb"/>
+                        <outlet property="searchContentsController" destination="iO2-P9-1Af" id="XuE-tk-luh"/>
+                        <outlet property="searchResultsDataSource" destination="iO2-P9-1Af" id="THC-JY-vQb"/>
+                        <outlet property="searchResultsDelegate" destination="iO2-P9-1Af" id="Q6c-YH-jjw"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3980" y="1556"/>
+            <point key="canvasLocation" x="3980" y="1555.7721139430287"/>
         </scene>
         <!--SQUAD LIST-->
         <scene sceneID="41H-g5-LaE">

@@ -8,22 +8,19 @@
 
 import UIKit
 import Firebase
-import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+
+class ViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var mapView: MKMapView!
-    
-    var manager = CLLocationManager()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegate = self
-        manager.requestWhenInUseAuthorization()
-        mapView.showsUserLocation = true
+        
+     
      
     }
     
