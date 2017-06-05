@@ -46,7 +46,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             if error != nil {
                 print("We had an error:\(String(describing: error))")
             } else {
-                print(metadata?.downloadURL())
+                print(metadata?.downloadURL()!)
                 self.performSegue(withIdentifier: "selectListSegue", sender: nil)
             }
         })

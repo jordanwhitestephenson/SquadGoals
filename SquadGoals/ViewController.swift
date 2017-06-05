@@ -8,15 +8,23 @@
 
 import UIKit
 import Firebase
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var manager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        manager.delegate = self
+        manager.requestWhenInUseAuthorization()
+        mapView.showsUserLocation = true
+     
     }
     
     
@@ -34,7 +42,9 @@ class ViewController: UIViewController {
                             print("Theres an error again")
                         } else {
                             print("Created user Successfully")
+                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                             self.performSegue(withIdentifier:  "signInSegue" , sender: nil)
+                        
                         }
                 })
                 

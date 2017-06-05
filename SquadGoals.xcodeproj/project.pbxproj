@@ -24,6 +24,9 @@
 		EFB73FDC1EE20B820090CF52 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */; };
 		EFB73FDE1EE20D3D0090CF52 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */; };
 		EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */; };
+		EFB73FE41EE335CC0090CF52 /* MySquadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FE31EE335CC0090CF52 /* MySquadViewController.swift */; };
+		EFB73FE61EE336330090CF52 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FE51EE336330090CF52 /* user.swift */; };
+		EFB73FEA1EE4D0250090CF52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB73FE91EE4D0250090CF52 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		EFB73FE31EE335CC0090CF52 /* MySquadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySquadViewController.swift; sourceTree = "<group>"; };
+		EFB73FE51EE336330090CF52 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		EFB73FE91EE4D0250090CF52 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB73FEA1EE4D0250090CF52 /* MapKit.framework in Frameworks */,
 				D23EA19C50DAF96B25A3AFAE /* Pods_SquadGoals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +72,7 @@
 		4450104E0FF66243487BF4B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFB73FE91EE4D0250090CF52 /* MapKit.framework */,
 				FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */,
 			);
 			name = Frameworks;
@@ -100,6 +108,8 @@
 		EFB73F8A1EDF323C0090CF52 /* SquadGoals */ = {
 			isa = PBXGroup;
 			children = (
+				EFB73FE81EE336B20090CF52 /* Models */,
+				EFB73FE71EE336740090CF52 /* ViewControllers */,
 				EFB73F8F1EDF323C0090CF52 /* Main.storyboard */,
 				EFB73FD91EE209930090CF52 /* squadgoallogo.png */,
 				EFB73FD31EE1E07D0090CF52 /* GoogleService-Info.plist */,
@@ -109,16 +119,32 @@
 				EFB73FAA1EDF3D710090CF52 /* mysquadbutton3.png */,
 				EFB73FA01EDF352F0090CF52 /* squadgoalslogo.png */,
 				EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */,
-				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
-				EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */,
-				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
-				EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */,
 				EFB73F951EDF323C0090CF52 /* Assets.xcassets */,
 				EFB73F971EDF323C0090CF52 /* LaunchScreen.storyboard */,
 				EFB73F9A1EDF323C0090CF52 /* Info.plist */,
 				EFB73F921EDF323C0090CF52 /* SquadGoals.xcdatamodeld */,
 			);
 			path = SquadGoals;
+			sourceTree = "<group>";
+		};
+		EFB73FE71EE336740090CF52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
+				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
+				EFB73FE31EE335CC0090CF52 /* MySquadViewController.swift */,
+				EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */,
+				EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFB73FE81EE336B20090CF52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFB73FE51EE336330090CF52 /* user.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +281,10 @@
 				EFB73F8E1EDF323C0090CF52 /* ViewController.swift in Sources */,
 				EFB73F8C1EDF323C0090CF52 /* AppDelegate.swift in Sources */,
 				EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */,
+				EFB73FE61EE336330090CF52 /* user.swift in Sources */,
 				EFB73FDC1EE20B820090CF52 /* AddTaskViewController.swift in Sources */,
 				EFB73FDE1EE20D3D0090CF52 /* TaskListViewController.swift in Sources */,
+				EFB73FE41EE335CC0090CF52 /* MySquadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
