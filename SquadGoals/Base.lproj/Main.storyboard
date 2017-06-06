@@ -82,31 +82,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdt-db-33x">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdt-db-33x">
                                 <rect key="frame" x="67" y="189" width="241" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mysquadbutton4.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgA-vA-MiA">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgA-vA-MiA">
                                 <rect key="frame" x="73" y="279" width="241" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="squadlistbutton2.png"/>
                                 <connections>
                                     <segue destination="jIb-nk-Ie4" kind="show" identifier="squadListSegue" id="zSZ-ur-cUr"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yg7-g6-6w3">
-                                <rect key="frame" x="155" y="421" width="66" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-AA-vsx">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30"/>
-                                        <state key="normal" title="ADD LIST"/>
-                                        <connections>
-                                            <segue destination="cqW-RJ-AT5" kind="show" id="JH7-su-EQA"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-0w-h7D">
-                                <rect key="frame" x="171" y="471" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-AA-vsx">
+                                <rect key="frame" x="154" y="369" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ADD LIST"/>
+                                <connections>
+                                    <segue destination="cqW-RJ-AT5" kind="show" id="JH7-su-EQA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-0w-h7D">
+                                <rect key="frame" x="171" y="426" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MAP"/>
                                 <connections>
                                     <segue destination="iO2-P9-1Af" kind="show" id="CDi-pb-97A"/>
@@ -114,13 +113,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Gdt-db-33x" firstAttribute="top" secondItem="EA5-iR-pHM" secondAttribute="bottom" constant="125" id="Eut-dW-COI"/>
-                            <constraint firstItem="lEf-0w-h7D" firstAttribute="top" secondItem="fSP-AA-vsx" secondAttribute="bottom" constant="20" id="XUy-je-gUa"/>
-                            <constraint firstItem="fSP-AA-vsx" firstAttribute="top" secondItem="zgA-vA-MiA" secondAttribute="bottom" constant="60" id="ggg-AM-7eb"/>
-                            <constraint firstItem="yg7-g6-6w3" firstAttribute="centerX" secondItem="gkv-qd-FHH" secondAttribute="centerX" id="pON-vh-ryL"/>
-                            <constraint firstItem="lEf-0w-h7D" firstAttribute="centerX" secondItem="gkv-qd-FHH" secondAttribute="centerX" id="qcV-Vp-1Gq"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="MY SQUAD" id="Sdk-tR-GZX">
@@ -250,11 +242,99 @@
                     </view>
                     <connections>
                         <outlet property="myToDoListTableView" destination="mW7-nb-obe" id="dnx-75-num"/>
+                        <segue destination="Tmj-dF-mLK" kind="show" identifier="ToDoVC" id="PBx-77-CMm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8I-tJ-QNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2519" y="3927"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="PnU-TB-B1T">
+            <objects>
+                <viewController storyboardIdentifier="ToDoVC" id="Tmj-dF-mLK" customClass="PickerViewController" customModule="SquadGoals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kqd-LG-mEX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ecg-xd-OAR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="es2-ho-0w3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TaskName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU3-Hj-GBQ">
+                                <rect key="frame" x="147" y="163" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ToDoCell"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-hh-vjQ">
+                                <rect key="frame" x="166" y="134" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02L-gX-aoo">
+                                <rect key="frame" x="136" y="216" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TaskDescription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqD-ok-Nly">
+                                <rect key="frame" x="136" y="245" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOCATION TAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpU-XT-3XK">
+                                <rect key="frame" x="136" y="305" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COMPLETE BY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-I4-H8W">
+                                <rect key="frame" x="133" y="370" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TaskLocationTag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-Vh-3a6">
+                                <rect key="frame" x="123" y="334" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TaskCompleteByDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45b-Lv-PbT">
+                                <rect key="frame" x="112" y="399" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="completeByLabel" destination="45b-Lv-PbT" id="khx-Pu-LhJ"/>
+                        <outlet property="descriptionLabel" destination="fwv-Vh-3a6" id="cLJ-MU-lPv"/>
+                        <outlet property="locationTagLabel" destination="fwv-Vh-3a6" id="gOr-w9-GsP"/>
+                        <outlet property="nameLabel" destination="ZU3-Hj-GBQ" id="4WN-Gu-pJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5W-Ic-gTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3333.5999999999999" y="3926.9865067466271"/>
         </scene>
         <!--Task Input View Controller-->
         <scene sceneID="t1N-xb-6WY">
@@ -268,8 +348,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-Ws-fTZ">
-                                <rect key="frame" x="125" y="148" width="125" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-Ws-fTZ">
+                                <rect key="frame" x="132" y="132" width="125" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="LsT-fS-TWe"/>
                                 </constraints>
@@ -277,35 +357,51 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-SS-eTA">
-                                <rect key="frame" x="151" y="103" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-SS-eTA">
+                                <rect key="frame" x="151" y="103" width="86" height="21"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Task Title">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="0.0056720890410958905" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="7" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96f-JB-Hxw">
+                                <rect key="frame" x="119" y="348" width="138" height="20"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Task Description">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v17-oh-WMS">
-                                <rect key="frame" x="125" y="237" width="125" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="CZo-rx-5CM"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96f-JB-Hxw">
-                                <rect key="frame" x="124" y="208" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtl-7S-kYJ">
-                                <rect key="frame" x="138" y="290" width="99" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtl-7S-kYJ">
+                                <rect key="frame" x="137" y="409" width="102" height="20"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Complete By">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="M44-n3-BoC">
-                                <rect key="frame" x="0.0" y="319" width="375" height="216"/>
+                                <rect key="frame" x="8" y="437" width="359" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="acg-eA-dt5"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="518397969.63247102">
                                     <!--2017-06-05 23:26:09 +0000-->
                                 </date>
@@ -318,33 +414,70 @@
                                     <segue destination="hWK-bw-SdX" kind="show" id="Ou0-EN-GhJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxv-a7-xS0">
+                                <rect key="frame" x="151" y="197" width="73" height="20"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Task Tag">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v17-oh-WMS">
+                                <rect key="frame" x="125" y="376" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="CZo-rx-5CM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oS-xM-zfm">
+                                <rect key="frame" x="139" y="236" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-WB-H8q">
+                                <rect key="frame" x="14" y="272" width="347" height="68"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qzc-GX-Tkf" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="510" id="0Dh-jm-rWq"/>
                             <constraint firstItem="3b4-Ws-fTZ" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="4lj-Jt-vRX"/>
-                            <constraint firstItem="v17-oh-WMS" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="173" id="6lL-S5-pLB"/>
-                            <constraint firstItem="qzc-GX-Tkf" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="510" id="7yQ-x4-b6L"/>
-                            <constraint firstItem="96f-JB-Hxw" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="144" id="FDg-qh-hUf"/>
-                            <constraint firstItem="M44-n3-BoC" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="255" id="FZY-D4-WlD"/>
-                            <constraint firstItem="gtl-7S-kYJ" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="226" id="LDq-du-2EB"/>
-                            <constraint firstItem="3b4-Ws-fTZ" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="84" id="NPU-2o-GbH"/>
+                            <constraint firstItem="v17-oh-WMS" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="312" id="AtP-0S-mIQ"/>
+                            <constraint firstItem="3b4-Ws-fTZ" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="68" id="Wdh-sR-zz0"/>
+                            <constraint firstItem="96f-JB-Hxw" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="XjD-fb-1ig"/>
+                            <constraint firstItem="v17-oh-WMS" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="aJ8-PJ-aeZ"/>
+                            <constraint firstItem="96f-JB-Hxw" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="284" id="aTK-eC-FPg"/>
+                            <constraint firstItem="M44-n3-BoC" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="373" id="afy-VY-bEa"/>
+                            <constraint firstItem="gtl-7S-kYJ" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="345" id="bCY-En-xbA"/>
                             <constraint firstItem="qzc-GX-Tkf" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="fZI-jH-9S5"/>
-                            <constraint firstItem="v17-oh-WMS" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="hlF-CF-MzH"/>
-                            <constraint firstItem="96f-JB-Hxw" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="iCp-ZR-w73"/>
-                            <constraint firstItem="gel-SS-eTA" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="39" id="iQo-lJ-mUd"/>
+                            <constraint firstItem="gel-SS-eTA" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="39" id="jaK-Rb-doL"/>
                             <constraint firstItem="gel-SS-eTA" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="ncx-cH-FbA"/>
+                            <constraint firstItem="zxv-a7-xS0" firstAttribute="top" secondItem="QVg-Qn-pPb" secondAttribute="bottom" constant="133" id="nfO-BY-qhk"/>
                             <constraint firstItem="gtl-7S-kYJ" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="roJ-C0-xPl"/>
+                            <constraint firstItem="zxv-a7-xS0" firstAttribute="centerX" secondItem="rEG-Gq-Vzi" secondAttribute="centerX" id="sP9-Vd-ggT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dropDown" destination="kSf-WB-H8q" id="sDa-2F-0lQ"/>
                         <outlet property="taskCalendarField" destination="M44-n3-BoC" id="BCA-Ki-Pqy"/>
                         <outlet property="taskDescriptionField" destination="v17-oh-WMS" id="TNi-du-cHr"/>
                         <outlet property="taskTitleField" destination="3b4-Ws-fTZ" id="0PD-rO-geb"/>
+                        <outlet property="textBox" destination="0oS-xM-zfm" id="7U6-0f-XY3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTa-cU-NX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2517.5999999999999" y="3117.3913043478265"/>
+            <point key="canvasLocation" x="2397.5999999999999" y="2990.5547226386807"/>
         </scene>
         <!--ADD LIST-->
         <scene sceneID="jnc-iS-red">

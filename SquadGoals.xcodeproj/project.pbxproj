@@ -32,6 +32,7 @@
 		EFF2E73F1EE5C84900ACB787 /* MapViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */; };
 		EFF2E7471EE5FFB200ACB787 /* TaskInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2E7461EE5FFB200ACB787 /* TaskInputViewController.swift */; };
 		EFF2E74B1EE634A200ACB787 /* toDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2E74A1EE634A200ACB787 /* toDos.swift */; };
+		EFF2E7511EE6502700ACB787 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2E7501EE6502700ACB787 /* PickerViewController.swift */; };
 		EFFA9F061EE5B75500B65DA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		EFB73FE91EE4D0250090CF52 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EFF2E7461EE5FFB200ACB787 /* TaskInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskInputViewController.swift; sourceTree = "<group>"; };
 		EFF2E74A1EE634A200ACB787 /* toDos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toDos.swift; sourceTree = "<group>"; };
+		EFF2E7501EE6502700ACB787 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = ../PickerViewController.swift; sourceTree = "<group>"; };
 		EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 		EFB73FE71EE336740090CF52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFF2E7501EE6502700ACB787 /* PickerViewController.swift */,
 				EF07F6F31EE5B9120040C390 /* HomeViewController.swift */,
 				EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */,
 				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
@@ -305,6 +308,7 @@
 				EFFA9F061EE5B75500B65DA8 /* MapViewController.swift in Sources */,
 				EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */,
 				EF07F6F41EE5B9120040C390 /* HomeViewController.swift in Sources */,
+				EFF2E7511EE6502700ACB787 /* PickerViewController.swift in Sources */,
 				EFF2E74B1EE634A200ACB787 /* toDos.swift in Sources */,
 				EFF2E7471EE5FFB200ACB787 /* TaskInputViewController.swift in Sources */,
 				EFB73FE61EE336330090CF52 /* user.swift in Sources */,

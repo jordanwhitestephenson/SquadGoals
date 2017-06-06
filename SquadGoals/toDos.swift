@@ -14,6 +14,7 @@ class ToDos: NSObject {
     var taskTitle:String?
     var taskDescription: String?
     var selectedDate: String?
+    var locationTag: String?
     // id which is set from firebase to uniquely identify it
     var uniqueId:String?
 
