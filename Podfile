@@ -12,6 +12,7 @@ target 'SquadGoals' do
     pod 'Firebase/Storage'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'GoogleToolboxForMac'
 
 
 end

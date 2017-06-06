@@ -13,7 +13,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var theSubmitButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var listDescriptionField: UITextField!
+//    @IBOutlet weak var listDescriptionField: UITextField!
  
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {

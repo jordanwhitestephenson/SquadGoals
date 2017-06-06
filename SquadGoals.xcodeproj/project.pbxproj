@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D23EA19C50DAF96B25A3AFAE /* Pods_SquadGoals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */; };
-		EF07F6F21EE5B8C20040C390 /* MySquadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07F6F11EE5B8C20040C390 /* MySquadViewController.swift */; };
+		4A257E7D52FB91870B063C46 /* Pods_SquadGoals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E96071D5D5C41D9C864D6E4 /* Pods_SquadGoals.framework */; };
 		EF07F6F41EE5B9120040C390 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07F6F31EE5B9120040C390 /* HomeViewController.swift */; };
 		EF2642031EE4E1D500E1492E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2642021EE4E1D500E1492E /* icon.png */; };
 		EF2642051EE4E87600E1492E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2642041EE4E87600E1492E /* CoreLocation.framework */; };
@@ -30,13 +29,16 @@
 		EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */; };
 		EFB73FE61EE336330090CF52 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB73FE51EE336330090CF52 /* user.swift */; };
 		EFB73FEA1EE4D0250090CF52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB73FE91EE4D0250090CF52 /* MapKit.framework */; };
+		EFF2E73F1EE5C84900ACB787 /* MapViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */; };
+		EFF2E7471EE5FFB200ACB787 /* TaskInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2E7461EE5FFB200ACB787 /* TaskInputViewController.swift */; };
+		EFF2E74B1EE634A200ACB787 /* toDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2E74A1EE634A200ACB787 /* toDos.swift */; };
 		EFFA9F061EE5B75500B65DA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquadGoals.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals.release.xcconfig"; sourceTree = "<group>"; };
 		697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquadGoals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquadGoals/Pods-SquadGoals.debug.xcconfig"; sourceTree = "<group>"; };
-		EF07F6F11EE5B8C20040C390 /* MySquadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySquadViewController.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/MySquadViewController.swift"; sourceTree = "<group>"; };
+		8E96071D5D5C41D9C864D6E4 /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF07F6F31EE5B9120040C390 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF2642021EE4E1D500E1492E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		EF2642041EE4E87600E1492E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,8 @@
 		EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		EFB73FE51EE336330090CF52 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		EFB73FE91EE4D0250090CF52 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EFF2E7461EE5FFB200ACB787 /* TaskInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskInputViewController.swift; sourceTree = "<group>"; };
+		EFF2E74A1EE634A200ACB787 /* toDos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toDos.swift; sourceTree = "<group>"; };
 		EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquadGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,7 +75,7 @@
 			files = (
 				EF2642051EE4E87600E1492E /* CoreLocation.framework in Frameworks */,
 				EFB73FEA1EE4D0250090CF52 /* MapKit.framework in Frameworks */,
-				D23EA19C50DAF96B25A3AFAE /* Pods_SquadGoals.framework in Frameworks */,
+				4A257E7D52FB91870B063C46 /* Pods_SquadGoals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +87,7 @@
 			children = (
 				EF2642041EE4E87600E1492E /* CoreLocation.framework */,
 				EFB73FE91EE4D0250090CF52 /* MapKit.framework */,
-				FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */,
+				8E96071D5D5C41D9C864D6E4 /* Pods_SquadGoals.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +95,7 @@
 		7243FA67D0B2129A7FEF9673 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				FD7D20013880FE66733BFF7A /* Pods_SquadGoals.framework */,
 				697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */,
 				075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */,
 			);
@@ -144,10 +149,10 @@
 				EF07F6F31EE5B9120040C390 /* HomeViewController.swift */,
 				EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */,
 				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
-				EF07F6F11EE5B8C20040C390 /* MySquadViewController.swift */,
 				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
 				EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */,
 				EFB73FDB1EE20B820090CF52 /* AddTaskViewController.swift */,
+				EFF2E7461EE5FFB200ACB787 /* TaskInputViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 		EFB73FE81EE336B20090CF52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EFF2E74A1EE634A200ACB787 /* toDos.swift */,
 				EFB73FE51EE336330090CF52 /* user.swift */,
 			);
 			name = Models;
@@ -223,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF2E73F1EE5C84900ACB787 /* MapViewController.swift in Resources */,
 				EFB73FAB1EDF3D710090CF52 /* mysquadbutton3.png in Resources */,
 				EFB73FAD1EDF3E040090CF52 /* mysquadbutton4.png in Resources */,
 				EFB73FDA1EE209930090CF52 /* squadgoallogo.png in Resources */,
@@ -272,7 +279,7 @@
 		};
 		A16B0E830E24DBF1B688F1BE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -298,10 +305,11 @@
 				EFFA9F061EE5B75500B65DA8 /* MapViewController.swift in Sources */,
 				EFB73FE01EE31EAD0090CF52 /* PictureViewController.swift in Sources */,
 				EF07F6F41EE5B9120040C390 /* HomeViewController.swift in Sources */,
+				EFF2E74B1EE634A200ACB787 /* toDos.swift in Sources */,
+				EFF2E7471EE5FFB200ACB787 /* TaskInputViewController.swift in Sources */,
 				EFB73FE61EE336330090CF52 /* user.swift in Sources */,
 				EFB73FDC1EE20B820090CF52 /* AddTaskViewController.swift in Sources */,
 				EFB73FDE1EE20D3D0090CF52 /* TaskListViewController.swift in Sources */,
-				EF07F6F21EE5B8C20040C390 /* MySquadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +338,7 @@
 		EFB73F9B1EDF323C0090CF52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -381,7 +389,7 @@
 		EFB73F9C1EDF323C0090CF52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -426,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 697E45BBB7E018831BBD5EDF /* Pods-SquadGoals.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GFBPFBC6X9;
 				INFOPLIST_FILE = SquadGoals/Info.plist;
@@ -440,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 075CA1594DED00B812D832EA /* Pods-SquadGoals.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GFBPFBC6X9;
 				INFOPLIST_FILE = SquadGoals/Info.plist;

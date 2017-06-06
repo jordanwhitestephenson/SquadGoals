@@ -8,68 +8,42 @@
 
 import UIKit
 import GoogleMaps
-import MapKit
 import CoreLocation
+import GooglePlaces
+
 
 class MapViewController: UIViewController, CLLocationManagerDelegate
-{
     
-    var locationManager = CLLocationManager()
-    lazy var mapView = GMSMapView()
+{
+
+
+    @IBOutlet weak var myView: GMSMapView!
+
+    var myLocation: CLLocationCoordinate2D!
+     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 13.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 13.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.isMyLocationEnabled = true
-        view = mapView
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        
-        // Add a Custom marker
-        let markerSquirt = GMSMarker()
-        markerSquirt.position = CLLocationCoordinate2D(latitude: -33.88, longitude: 151.20)
-        markerSquirt.title = "Squirtle"
-        markerSquirt.snippet = "Squirtle lives here"
-        markerSquirt.map = mapView
-        markerSquirt.icon = UIImage(named: "007 Squirtle")
-        
-        // User Location
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        
-        
+      
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userLocation = locations.last
-        let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
-        
-        let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
-                                              longitude: userLocation!.coordinate.longitude, zoom: 13.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.isMyLocationEnabled = true
-        self.view = mapView
-        
+       
+        let location = locations[0]
+        myLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        myView.camera = GMSCameraPosition(target: myLocation, zoom: 15, bearing: 0, viewingAngle: 0)
         locationManager.stopUpdatingLocation()
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let marker = GMSMarker()
+        marker.position = myView.camera.target
+        marker.snippet = "Current Location"
+        marker.map = myView
+        
+        
     }
 
+    
 
 }
