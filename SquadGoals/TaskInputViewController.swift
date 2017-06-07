@@ -21,8 +21,6 @@ class TaskInputViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
- 
-    
     @IBOutlet weak var taskTitleField: UITextField!
     @IBOutlet weak var taskDescriptionField: UITextField!
     @IBOutlet weak var taskCalendarField: UIDatePicker!

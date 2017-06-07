@@ -14,7 +14,7 @@ class TaskListViewController: UIViewController, UITableViewDataSource, UITableVi
     var users: [User] = []
     
     override func viewDidLoad() {
-super.viewDidLoad()
+        super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         Database.database().reference().child("users").observe(DataEventType.childAdded, with: {(snapshot) in

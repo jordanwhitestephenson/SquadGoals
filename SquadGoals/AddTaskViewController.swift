@@ -8,17 +8,33 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import CoreLocation
+import GooglePlaces
 
-var list = ["Buy Milk", "Run 5 Miles", "Get Peter", "Plant My New Plants"]
 
 
-class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
+
+class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate {
     
+
+  
+    @IBOutlet weak var TaskMapView: GMSMapView!
 
     @IBOutlet weak var myToDoListTableView: UITableView!
   
     var todoList = [ToDos]()
+    var myLocation: CLLocationCoordinate2D!
+    let locationManager = CLLocationManager()
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+    }
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,43 +91,20 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let todoVC = self.storyboard!.instantiateViewController(withIdentifier: "ToDoVC") as! PickerViewController
        
         todoVC.todos = todoList[indexPath.row]
-        self.navigationController?.pushViewController(todoVC, animated: true)
+//        self.navigationController?.pushViewController(todoVC, animated: true)
     }
-    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations[0]
+        myLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        TaskMapView.camera = GMSCameraPosition(target: myLocation, zoom: 15, bearing: 0, viewingAngle: 0)
+        locationManager.stopUpdatingLocation()
+        let marker = GMSMarker()
+        marker.position = TaskMapView.camera.target
+        marker.snippet = "Current Location"
+        marker.map = TaskMapView
+        
+    }
 
     
-    
-    
-    
-    
-    
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return (list.count)
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = list[indexPath.row]
-//   
-//        return(cell)
-//    }
-//    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.delete {
-//            list.remove(at: indexPath.row)
-//            myToDoListTableView.reloadData()
-//        }
-//    }
-//    override func viewDidAppear(_ animated: Bool) {
-//    myToDoListTableView.reloadData()
-//    }
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//    }
-//
-
-
 }

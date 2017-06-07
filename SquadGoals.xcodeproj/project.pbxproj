@@ -148,9 +148,9 @@
 		EFB73FE71EE336740090CF52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */,
 				EFF2E7501EE6502700ACB787 /* PickerViewController.swift */,
 				EF07F6F31EE5B9120040C390 /* HomeViewController.swift */,
-				EFFA9F051EE5B75500B65DA8 /* MapViewController.swift */,
 				EFB73FDD1EE20D3D0090CF52 /* TaskListViewController.swift */,
 				EFB73F8D1EDF323C0090CF52 /* ViewController.swift */,
 				EFB73FDF1EE31EAD0090CF52 /* PictureViewController.swift */,

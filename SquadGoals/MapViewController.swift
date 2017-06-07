@@ -10,25 +10,32 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 import GooglePlaces
+import FirebaseDatabase
+import Firebase
 
-
-class MapViewController: UIViewController, CLLocationManagerDelegate
+class MapViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate
     
 {
-
-
+ 
     @IBOutlet weak var myView: GMSMapView!
 
-    var myLocation: CLLocationCoordinate2D!
-     let locationManager = CLLocationManager()
+   
     
+    var myLocation: CLLocationCoordinate2D!
+    let locationManager = CLLocationManager()
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-      
+
     }
+
+
+
+
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        

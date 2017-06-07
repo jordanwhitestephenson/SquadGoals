@@ -10,6 +10,8 @@
 	<string>&quot;We want to track youuuuu&quot;</string>
 	<key>NSCameraUsageDescription</key>
 	<string>&quot;We want to use your photos&quot;</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>&quot;WE WANT TO USE YOUR LIBRARY&quot;</string>
 	<key>CFBundleDevelopmentRegion</key>
