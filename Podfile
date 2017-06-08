@@ -13,6 +13,10 @@ target 'SquadGoals' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'GoogleToolboxForMac'
+    pod 'GooglePlacePicker'
+    pod 'NWPusher', '~> 0.7.0'
+    pod 'Firebase/Messaging'
+    pod 'Mapbox-iOS-SDK', '~> 3.5'
 
 
 end

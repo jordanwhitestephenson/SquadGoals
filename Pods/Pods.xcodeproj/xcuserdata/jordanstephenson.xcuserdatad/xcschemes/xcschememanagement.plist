@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NWPusher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SquadGoals.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Protobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>145EF80758A4EC4BA0C78AF919B9C397</key>
+		<key>BC32FAC217FAC225EE19EB7B541C18C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -33,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>F4503222917C60E996841A7192BC579A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC9B68D42FD26A60BCEB86272B1E82B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEA509A4DE4163C6D0766125D36F4335</key>
 		<dict>
 			<key>primary</key>
 			<true/>

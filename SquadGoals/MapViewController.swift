@@ -12,45 +12,46 @@ import CoreLocation
 import GooglePlaces
 import FirebaseDatabase
 import Firebase
+import GooglePlacePicker
+import Mapbox
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate
-    
-{
- 
-    @IBOutlet weak var myView: GMSMapView!
 
-   
+class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDelegate {
     
-    var myLocation: CLLocationCoordinate2D!
-    let locationManager = CLLocationManager()
-    
-  
+    @IBOutlet weak var mapView: MGLMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
+        let locationManager = CLLocationManager()
+        let url = URL(string: "mapbox://styles/mapbox/streets-v10")
+        let point = MGLPointAnnotation()
+        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        super.viewDidLoad()
+        locationManager.delegate = self as! CLLocationManagerDelegate
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-
+      
+ 
     }
-
-
-
-
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-       
-        let location = locations[0]
-        myLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        myView.camera = GMSCameraPosition(target: myLocation, zoom: 15, bearing: 0, viewingAngle: 0)
-        locationManager.stopUpdatingLocation()
-        let marker = GMSMarker()
-        marker.position = myView.camera.target
-        marker.snippet = "Current Location"
-        marker.map = myView
-        
-        
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        return nil
     }
-
-    
-
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let location = locations.last
+        let mapView = MGLMapView(frame: view.bounds)
+        mapView.userTrackingMode = .follow
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        mapView.setCenter(center, zoomLevel: 15, animated: true)
+        view.addSubview(mapView)
+      
+    }
+    func  locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print ("Errors:" + error.localizedDescription)
+    }
+  
 }
+
+ 

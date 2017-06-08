@@ -11,19 +11,52 @@ import CoreData
 import Firebase
 import GoogleMaps
 import GooglePlaces
+import GooglePlacePicker
+import UserNotifications
+import FirebaseInstanceID
+import FirebaseMessaging
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
+    /// This method will be called whenever FCM receives a new, default FCM token for your
+    /// Firebase project's Sender ID.
+    /// You can send this token to your application server to send notifications to this device.
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Messaging")
+    }
+
 
     var window: UIWindow?
-
+    
+    func application(received remoteMessage: MessagingRemoteMessage) {
+        print(remoteMessage.appData)
+    }
  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyAg2tfdOnKCTSMRyC5-TpfMLkh_RJC-OEQ")
+//        registerForPushNotifications()
+        
+        let notificationTypes : UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
+        let notificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
+        
+        
+        
+        application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
         return true
     }
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        let dict = userInfo["aps"] as! NSDictionary;
+        let message = dict["alert"]
+        print("%@", message!)
+    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -93,6 +126,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+        print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+        UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self.getNotificationSettings()
+            
+        }
+    }
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+        
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
+    
 
 }
+
+
+
 

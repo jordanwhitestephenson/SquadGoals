@@ -43,6 +43,7 @@
 		EF07F6F31EE5B9120040C390 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF2642021EE4E1D500E1492E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		EF2642041EE4E87600E1492E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EF5D96E11EE889A0007932D5 /* SquadGoals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SquadGoals.entitlements; sourceTree = "<group>"; };
 		EFB73F881EDF323C0090CF52 /* SquadGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquadGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB73F8B1EDF323C0090CF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB73F8D1EDF323C0090CF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		EFB73F8A1EDF323C0090CF52 /* SquadGoals */ = {
 			isa = PBXGroup;
 			children = (
+				EF5D96E11EE889A0007932D5 /* SquadGoals.entitlements */,
 				EFB73FE81EE336B20090CF52 /* Models */,
 				EFB73FE71EE336740090CF52 /* ViewControllers */,
 				EFB73F8F1EDF323C0090CF52 /* Main.storyboard */,
@@ -204,8 +206,16 @@
 				TargetAttributes = {
 					EFB73F871EDF323B0090CF52 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = GFBPFBC6X9;
+						DevelopmentTeam = 9937BB9ZP5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -440,12 +450,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GFBPFBC6X9;
+				CODE_SIGN_ENTITLEMENTS = SquadGoals/SquadGoals.entitlements;
+				DEVELOPMENT_TEAM = 9937BB9ZP5;
 				INFOPLIST_FILE = SquadGoals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SquadGoals.SquadGoals;
+				PRODUCT_BUNDLE_IDENTIFIER = SquadGoals.SquadGoals1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,12 +467,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GFBPFBC6X9;
+				CODE_SIGN_ENTITLEMENTS = SquadGoals/SquadGoals.entitlements;
+				DEVELOPMENT_TEAM = 9937BB9ZP5;
 				INFOPLIST_FILE = SquadGoals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SquadGoals.SquadGoals;
+				PRODUCT_BUNDLE_IDENTIFIER = SquadGoals.SquadGoals1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
